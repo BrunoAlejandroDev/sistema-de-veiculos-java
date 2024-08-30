@@ -17,6 +17,7 @@ public class Main {
             System.out.println("4. Ligar o motor de um veículo");
             System.out.println("5. Desligar o motor de um veículo");
             System.out.println("6. Acelerar veículo");
+            System.out.println("7. Frear Veiculo");
             //System.out.println("1. Mostrar detalhes de um veículo");
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");

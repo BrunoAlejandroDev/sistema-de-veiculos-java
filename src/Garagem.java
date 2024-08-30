@@ -3,13 +3,6 @@ import java.util.List;
 
 public class Garagem {
 
-    /* Metodos
-    cadastrarVeiculo(); -> cadastrar um novo carro passando todas as informações e ao final esse carro sera adicionado a uma lista de veiculos
-    excluirVeiculo(); -> acessar lista de veiculos cadastrados e excluir alguma veiculo especifico
-    listarTodosOsVeiculos(); -> acessar lista de veiculos
-    exibirDetalhesVeiculo(); -> acessar lista, procurar um veiculo especifico e exibir detalhes
-     */
-
     private List<Veiculo> veiculos;
 
     public Garagem()
@@ -104,6 +97,15 @@ public class Garagem {
         {
             Veiculo veiculo = veiculos.get(indice);
             veiculo.acelerar();
+        }
+    }
+
+    public void frearVeiculo(int indice)
+    {
+        if (indice >= 0 && indice < veiculos.size())
+        {
+            Veiculo veiculo = veiculos.get(indice);
+            veiculo.frear();
         }
     }
 }
