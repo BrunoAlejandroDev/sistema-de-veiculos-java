@@ -45,7 +45,6 @@ public class Garagem {
         }
         else
         {
-            System.out.println("====== Lista de veículos ======");
             for (int i = 0; i < veiculos.size(); i++)
             {
                 Veiculo veiculo = veiculos.get(i);
@@ -57,6 +56,7 @@ public class Garagem {
         }
     }
 
+    // uso dos metodos da interface via downcasting
     public void ligarMotorVeiculo(int indice)
     {
         if (indice >= 0 && indice < veiculos.size())
@@ -94,6 +94,16 @@ public class Garagem {
         else
         {
             System.out.println("Índice inválido.");
+        }
+    }
+
+    // acessar os métodos abstratos da classe veículo
+    public void acelerarVeiculo(int indice)
+    {
+        if (indice >= 0 && indice < veiculos.size())
+        {
+            Veiculo veiculo = veiculos.get(indice);
+            veiculo.acelerar();
         }
     }
 }

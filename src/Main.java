@@ -16,6 +16,7 @@ public class Main {
             System.out.println("3. Mostrar todos os veículos");
             System.out.println("4. Ligar o motor de um veículo");
             System.out.println("5. Desligar o motor de um veículo");
+            System.out.println("6. Acelerar veículo");
             //System.out.println("1. Mostrar detalhes de um veículo");
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
@@ -26,6 +27,7 @@ public class Main {
             {
                 // adicionar veiculo
                 case 1:
+                    System.out.println("====== Cadastrar veículo ======");
                     System.out.print("Digite a marca do veiculo: ");
                     String marca = input.nextLine();
                     System.out.print("Digite o modelo do veículo: ");
@@ -44,6 +46,7 @@ public class Main {
 
                     // instanciando um novo Carro e adicionando na garagem
                     garagem.cadastrarVeiculo(new Carro(marca, modelo, ano, cor, tipoVeiculo, tipoDirecao));
+                    System.out.println();
                     break;
 
                 // excluir veículo
@@ -108,6 +111,24 @@ public class Main {
                         int indiceMotorDesligado = input.nextInt();
                         input.nextLine();
                         garagem.desligarMotorVeiculo(indiceMotorDesligado);
+                    }
+                    break;
+
+                case 6:
+                    System.out.println("====== Lista de carros cadastrados ====== ");
+                    listarVeiculos = garagem.mostrarListaDeVeiculos();
+
+                    if (!listarVeiculos)
+                    {
+                        System.out.println("Não há carros na garagem.");
+                        System.out.println();
+                    }
+                    else
+                    {
+                        System.out.print("Digite o índice do veículo que você deseja acelerar: ");
+                        int indiceAcelerar = input.nextInt();
+                        input.nextLine();
+                        garagem.acelerarVeiculo(indiceAcelerar);
                     }
                     break;
 

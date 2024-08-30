@@ -2,20 +2,19 @@ public class Carro extends Veiculo implements Motorizado {
 
     // Atributos
     private boolean statusMotor;
-    private boolean statusRadio;
+//    private boolean statusRadio;
 //    private boolean arcondicionado;
 //    private boolean vidrosEletricos;
     private String tipoCarro;
     private String tipoDirecao;
 
-    public Carro(String marca, String motor, int ano, String cor,
+    public Carro(String marca, String modelo, int ano, String cor,
                  String tipoCarro, String tipoDirecao)
     {
-        super(marca, motor, ano, cor);
+        super(marca, modelo, ano, cor);
         this.tipoCarro = tipoCarro;
         this.tipoDirecao = tipoDirecao;
         this.statusMotor = false;
-        this.statusRadio = false;
     }
 
     // Implementacao dos metodos da classe abstrata
@@ -24,10 +23,11 @@ public class Carro extends Veiculo implements Motorizado {
     {
         if (statusMotor)
         {
-            System.out.println("O carro está acelerando.");
+            System.out.println("O " + getMarca() + " " + getModelo() + " está acelerando. VRUMMMMMM");
         }
-        else {
-            System.out.println("O motor está desligado.");
+        else
+        {
+            System.out.println("O motor do/a " + getMarca() + " " + getModelo() + " está desligado.");
         }
     }
 
@@ -35,9 +35,11 @@ public class Carro extends Veiculo implements Motorizado {
     public void frear()
     {
         if (statusMotor) {
-            System.out.println("O carro está freando");
-        } else {
-            System.out.println("O motor está desligado.");
+            System.out.println("O " + getMarca() + " " + getModelo() + " está freando.");
+        }
+        else
+        {
+            System.out.println("O motor do/a " + getMarca() + " " + getModelo() + " está desligado.");
         }
     }
 
