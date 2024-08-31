@@ -39,7 +39,7 @@ public class Main {
                     String cor = input.next();
 
                     // atributos especificos da classe Carro
-                    System.out.print("Digite o tipo do veículo: ");
+                    System.out.print("Digite o tipo do veículo: (SUV, Sedan, Picape, Esportivo...) ");
                     String tipoVeiculo = input.next();
                     System.out.print("Digite o tipo de direção: ");
                     String tipoDirecao = input.next();
@@ -98,6 +98,7 @@ public class Main {
                     }
                     break;
 
+                // desligar o motor de um veiculo
                 case 5:
                     System.out.println("====== Lista de carros cadastrados ====== ");
                     listarVeiculos = garagem.mostrarListaDeVeiculos();
@@ -115,6 +116,7 @@ public class Main {
                     }
                     break;
 
+                // acelerar veiculo
                 case 6:
                     System.out.println("====== Lista de carros cadastrados ====== ");
                     listarVeiculos = garagem.mostrarListaDeVeiculos();
@@ -133,6 +135,7 @@ public class Main {
                     }
                     break;
 
+                // frear veiculo
                 case 7:
                     System.out.println("====== Lista de carros cadastrados ====== ");
                     listarVeiculos = garagem.mostrarListaDeVeiculos();
@@ -151,6 +154,7 @@ public class Main {
                     }
                     break;
 
+                // sair
                 case 0:
                     System.out.println("Saindo...");
                     input.close();

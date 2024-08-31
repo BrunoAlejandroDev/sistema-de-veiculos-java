@@ -2,9 +2,6 @@ public class Carro extends Veiculo implements Motorizado {
 
     // Atributos
     private boolean statusMotor;
-//    private boolean statusRadio;
-//    private boolean arcondicionado;
-//    private boolean vidrosEletricos;
     private String tipoCarro;
     private String tipoDirecao;
 
@@ -61,12 +58,12 @@ public class Carro extends Veiculo implements Motorizado {
     {
         if (statusMotor)
         {
-            System.out.println("O motor já está ligado.");
+            System.out.println("O motor do " + getMarca() + " " + getModelo() + " já está ligado.");
         }
         else
         {
             statusMotor = true;
-            System.out.println("Motor ligado com sucesso.");
+            System.out.println("Motor do " + getMarca() + " " + getModelo() + "ligado com sucesso.");
         }
     }
 
@@ -75,11 +72,11 @@ public class Carro extends Veiculo implements Motorizado {
         if (statusMotor)
         {
             statusMotor = false;
-            System.out.println("Motor desligado com sucesso.");
+            System.out.println("Motor do " + getMarca() + " " + getModelo() + "desligado com sucesso.");
         }
         else
         {
-            System.out.println("O motor já está desligado.");
+            System.out.println("O motor do " + getMarca() + " " + getModelo() + " já está desligado.");
         }
     }
 
