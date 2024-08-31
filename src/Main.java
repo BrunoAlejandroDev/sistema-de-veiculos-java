@@ -133,9 +133,31 @@ public class Main {
                     }
                     break;
 
+                case 7:
+                    System.out.println("====== Lista de carros cadastrados ====== ");
+                    listarVeiculos = garagem.mostrarListaDeVeiculos();
+
+                    if (!listarVeiculos)
+                    {
+                        System.out.println("Não há carros na garagem.");
+                        System.out.println();
+                    }
+                    else
+                    {
+                        System.out.println("Digite o índice do veículo que deseja frear: ");
+                        int indiceFrear = input.nextInt();
+                        input.nextLine();
+                        garagem.frearVeiculo(indiceFrear);
+                    }
+                    break;
+
                 case 0:
                     System.out.println("Saindo...");
                     input.close();
+                    break;
+
+                default:
+                    System.out.println("Opção inválida. Digite novamente: ");
                     break;
             }
         }
